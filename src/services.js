@@ -1,4 +1,4 @@
-const apiUrl = 'http://localhost:3010';
+const apiUrl = import.meta.env.BE_URL;
 
 export const service = {
     increment() {
