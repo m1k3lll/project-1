@@ -1,5 +1,7 @@
 const apiUrl = import.meta.env.BE_URL;
 
+console.log(apiUrl);
+
 export const service = {
     increment() {
        return fetch(`${apiUrl}/increment`, {
