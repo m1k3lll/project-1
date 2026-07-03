@@ -1,4 +1,4 @@
-const apiUrl = import.meta.env.BE_URL;
+const apiUrl = import.meta.env.VITE_BE_URL;
 
 console.log(apiUrl);
 
