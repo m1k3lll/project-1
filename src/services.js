@@ -36,7 +36,9 @@ export const service = {
     },
 
     resetCounter(){
-        return fetch(`${apiUrl}/resetCounter`).then(res => {
+        return fetch(`${apiUrl}/resetCounter`, {
+            method: 'POST'
+        }).then(res => {
             if(res.status === 200){
                 return true;
             }else {
