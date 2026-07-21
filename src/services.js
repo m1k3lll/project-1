@@ -33,5 +33,15 @@ export const service = {
                 return false;
             }
         })
-    }
+    },
+
+    resetCounter(){
+        return fetch(`${apiUrl}/resetCounter`).then(res => {
+            if(res.status === 200){
+                return true;
+            }else {
+                return false;
+            }
+        })
+    },
 };

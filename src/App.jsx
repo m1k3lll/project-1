@@ -34,6 +34,14 @@ function App() {
     }
   };
 
+  async function resetCounter(){
+    const result = await service.resetCounter();
+    if(result){
+      setState(0);
+    }else {
+      setError('ResetCounter Failed !');
+    }
+  }
 
 
   return (
@@ -44,6 +52,7 @@ function App() {
           <button onClick={increment}>+</button>
           <button onClick={decrement}>-</button>
           {error && <div>{error}</div>}
+          <button onClick={resetCounter}> Reset </button>
         </div>
       </div>
     </div>
